@@ -1,0 +1,18 @@
+{
+  "name": "@rally-js/orm",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Flavio Tulino <ftulino@bookingbug.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "typeorm": "^0.2.25"
+  }
+}
