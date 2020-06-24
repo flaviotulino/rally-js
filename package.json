@@ -1,7 +1,7 @@
 {
   "name": "root",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^3.4.0",
     "@typescript-eslint/parser": "^3.4.0",
