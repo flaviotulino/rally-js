@@ -6,6 +6,8 @@
   "homepage": "",
   "license": "ISC",
   "main": "cli.js",
+  "scope": "@rally-js",
+  "access": "public",
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
