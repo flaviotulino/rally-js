@@ -1,0 +1,6 @@
+48 error Error: Command failed: git tag v1.0.0 -m v1.0.0
+48 error fatal: tag 'v1.0.0' already exists
+48 error
+48 error     at makeError (/Users/flaviotulino/workspace/rally-js/node_modules/execa/index.js:174:9)
+48 error     at /Users/flaviotulino/workspace/rally-js/node_modules/execa/index.js:278:16
+48 error     at processTicksAndRejections (internal/process/task_queues.js:93:5)
