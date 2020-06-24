@@ -17,5 +17,9 @@
   },
   "bin": {
     "rally-js": "cli.js"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "b48b8fdc79490944193a5bbe94307a0a6a26238f"
 }

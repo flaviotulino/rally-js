@@ -14,5 +14,6 @@
   },
   "dependencies": {
     "typeorm": "^0.2.25"
-  }
+  },
+  "gitHead": "b48b8fdc79490944193a5bbe94307a0a6a26238f"
 }
