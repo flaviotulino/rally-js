@@ -50,7 +50,7 @@ function registerControllers(router, routesTable, $verbose) {
         }
       }
 
-      // final middleware
+      // final  middleware
       middlewares.push(async (ctx, next) => {
         if ($verbose) {
           console.table({
