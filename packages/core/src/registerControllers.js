@@ -1,5 +1,5 @@
 import { join, relative, resolve } from 'path';
-import ejs, { compile } from 'ejs';
+import ejs from 'ejs';
 import fs from 'fs';
 import parsingMiddleware from './middlewares/parsingMiddleware';
 import validationMiddleware from './middlewares/validationMiddleware';
