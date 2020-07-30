@@ -1,4 +1,6 @@
-import { join, relative } from 'path';
+import { join, relative, resolve } from 'path';
+import ejs, { compile } from 'ejs';
+import fs from 'fs';
 import parsingMiddleware from './middlewares/parsingMiddleware';
 import validationMiddleware from './middlewares/validationMiddleware';
 
@@ -12,7 +14,7 @@ function registerControllers(router, routesTable, $verbose) {
 
   controllers.keys().forEach((ctrl) => {
     const {
-      method = 'get', url, before = null, handler, after = null, enabled = true, schema = null,
+      method = 'get', url, before = null, handler, after = null, enabled = true, schema = null, view = false,
     } = controllers(ctrl).default;
 
     if (enabled) {
@@ -60,8 +62,18 @@ function registerControllers(router, routesTable, $verbose) {
           });
         }
 
-        const body = await handler(ctx);
-        ctx.body = body;
+        const result = await handler(ctx);
+
+        if (view !== false && typeof view === 'string') {
+          const viewPath = resolve(process.env.PROJECT, join(viewsPath, `${view}.ejs`));
+          const content = fs.readFileSync(viewPath, 'utf-8');
+          const template = ejs.compile(content);
+          const compiled = template(result);
+          ctx.type = 'text/html';
+          ctx.body = compiled;
+        } else {
+          ctx.body = result;
+        }
 
         if (after) {
           if (Array.isArray(after)) {

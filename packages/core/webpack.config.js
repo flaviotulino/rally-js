@@ -15,6 +15,7 @@ const overrides = fs.existsSync(configPath) ? require(configPath) : {};
 
 const controllersPath = overrides.paths ? overrides.paths.controllers : path.join('src', 'controllers');
 const modelsPath = overrides.paths ? overrides.paths.models : path.join('src', 'models');
+const viewsPath = overrides.paths ? overrides.paths.views : path.join('src', 'views');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -98,6 +99,7 @@ const config = merge({
     new webpack.DefinePlugin({
       controllersPath: JSON.stringify(path.resolve(project, controllersPath)),
       modelsPath: JSON.stringify(path.resolve(project, modelsPath)),
+      viewsPath: JSON.stringify(path.resolve(project, viewsPath)),
     }),
   ],
 

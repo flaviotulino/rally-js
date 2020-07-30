@@ -13,6 +13,7 @@ module.exports = {
   globals: {
     controllersPath: true,
     modelsPath: true,
+    viewsPath: true,
   },
   rules: {
   },

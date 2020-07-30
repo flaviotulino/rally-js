@@ -20,7 +20,7 @@ export default ({
   const app = new Koa();
   app.use(bodyParser());
 
-  const routerConfig = config().router;
+  const routerConfig = config().router || {};
 
   const router = new Router({
     prefix: routerConfig.prefix || '/',
