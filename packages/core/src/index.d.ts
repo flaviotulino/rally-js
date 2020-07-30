@@ -23,6 +23,7 @@ interface ActionOptions {
     after?: ActionMiddleware | Array<ActionMiddleware>;
     before?: ActionMiddleware | Array<ActionMiddleware>;
     handler(ctx: Koa.Context, next?: Koa.Next): void;
+    view: false | string;
 }
 
 export class Action {
