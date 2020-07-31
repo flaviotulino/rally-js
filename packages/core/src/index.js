@@ -7,9 +7,9 @@ import config from './config';
 import registerControllers from './registerControllers';
 import registerModels from './registerModels';
 
-import Action from './Action';
+import Controller from './Controller';
 
-export { Action };
+export { Controller };
 
 export default ({
   plugins = {

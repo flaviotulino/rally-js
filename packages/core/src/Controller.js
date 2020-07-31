@@ -1,7 +1,7 @@
-class Action {
+class Controller {
   constructor(config) {
     Object.assign(this, config);
   }
 }
 
-export default Action;
+export default Controller;
